@@ -1,5 +1,5 @@
 import { RESTAPIService, RESTAPIServiceProperties } from "./lib/restapi.service";
 
-export { RESTAPIServiceProperties as Properties };
+export { RESTAPIServiceProperties };
 
 module.exports = RESTAPIService;
