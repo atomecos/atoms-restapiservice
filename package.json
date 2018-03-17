@@ -1,0 +1,46 @@
+{
+  "name": "atoms-restapiservice",
+  "version": "0.0.1-alpha.1",
+  "description": "Providing REST API Service as AtomServices Service",
+  "main": "./dst/index.js",
+  "typings": "./typings/index.d.ts",
+  "scripts": {
+    "build": "npm run cleanup && npm run build-ts",
+    "test": "npm run cleanup && npm run test-ts",
+    "test-cvr": "npm run cleanup && npm run test-cvr-ts",
+    "test-ts": "npm run build-ts && npm run test-all",
+    "test-cvr-ts": "npm run build-ts && npm run test-all-cvr",
+    "build-ts": "npm run tslint && tsc",
+    "tslint": "tslint -c tslint.json -p tsconfig.json",
+    "cleanup": "node cleanup",
+    "aftertests": "node aftertests",
+    "test-all": "npm run test-mocha",
+    "test-all-cvr": "npm run test-mocha-cvr",
+    "test-mocha": "mocha test --recursive",
+    "test-mocha-cvr": "nyc mocha test --recursive",
+    "coverage": "npm run coveralls",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "cix-lic": "cix-lic --conf"
+  },
+  "author": "Architecode Corporation",
+  "license": "MIT",
+  "repository": "git+https://github.com/atomecos/atoms-restapiservice",
+  "dependencies": {
+    "atoms-httpcore": "0.0.1-alpha.23",
+    "atomservices": "0.0.1-alpha.39",
+    "atomservicescore": "0.1.0-alpha.54"
+  },
+  "devDependencies": {
+    "@types/node": "^9.4.7",
+    "chai": "^4.1.2",
+    "cix-lic": "^2.0.5",
+    "coveralls": "^3.0.0",
+    "mocha": "^5.0.4",
+    "mock-require": "^3.0.1",
+    "nyc": "^11.6.0",
+    "shelljs": "^0.8.1",
+    "sinon": "^4.4.6",
+    "tslint": "^5.9.1",
+    "typescript": "^2.7.2"
+  }
+}

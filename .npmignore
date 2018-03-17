@@ -1,0 +1,14 @@
+# Folders 
+.nyc_output/
+src/
+test/
+
+# Files
+.gitignore
+*.yml
+aftertests.js
+cleanup.js
+package-lock.json
+README.md
+tsconfig.json
+tslint.json

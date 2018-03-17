@@ -1,0 +1,7 @@
+# Folders
+.nyc_output/
+node_modules/
+dst/
+typings/
+
+# Files
